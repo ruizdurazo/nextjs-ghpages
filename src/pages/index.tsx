@@ -13,6 +13,7 @@ import styles from '../styles/Home.module.scss'
 import texts from '../../textos.js'
 
 import hero from '../../public/images/imagen-prueba.jpeg'
+// @ts-ignore
 import heroP from '../../public/images/imagen-prueba.jpeg?lqip'
 
 const Home: NextPage = () => {
