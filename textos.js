@@ -3,8 +3,8 @@ const texts = {
   deutsch: {
     //
     meta: {
-      pageTitle: 'ddd',
-      pageDescription: 'sdfsdfsd',
+      pageTitle: 'This is a test',
+      pageDescription: 'Descriptive description',
     },
     //
     hero: {
