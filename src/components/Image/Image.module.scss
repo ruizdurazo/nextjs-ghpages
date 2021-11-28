@@ -1,0 +1,15 @@
+.test {
+  position: relative;
+  overflow: hidden;
+
+  & * {
+    position: relative;
+    top: 0;
+    left: 0;
+    // height: 100%;
+  }
+
+  .placeholder {
+    filter: blur(25px);
+  }
+}
