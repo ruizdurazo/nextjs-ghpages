@@ -44,7 +44,9 @@ export const Image = ({ src, placeholder, width, height, alt }: ImageProps) => {
         {/* // src={`${src}?lqip`} */}
         {/* src={require(`${src}?lqip`)} */}
         <img
-          src={placeholder}
+          src={`${
+            process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''
+          }${placeholder}`}
           width={width}
           height={height}
           alt={alt}
@@ -61,7 +63,9 @@ export const Image = ({ src, placeholder, width, height, alt }: ImageProps) => {
 
           //   setIsImageLoaded(true)
           // }}
-          src={src}
+          src={`${
+            process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''
+          }${src}`}
           width={width}
           height={height}
           alt={alt}
