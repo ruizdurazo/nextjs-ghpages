@@ -44,9 +44,7 @@ export const Image = ({ src, placeholder, width, height, alt }: ImageProps) => {
         {/* // src={`${src}?lqip`} */}
         {/* src={require(`${src}?lqip`)} */}
         <img
-          src={`${
-            process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''
-          }${placeholder}`}
+          src={`${placeholder}`}
           width={width}
           height={height}
           alt={alt}
