@@ -3,13 +3,13 @@ const texts = {
   deutsch: {
     //
     meta: {
-      pageTitle: 'This is a Kizomba',
+      pageTitle: 'This is a test',
       pageDescription: 'Descriptive description',
     },
     //
     hero: {
       title: {
-        top: 'Salsa-Tanzschule',
+        top: 'Kizomba-Tanzschule',
         bottom: 'in Zürich',
       },
       intro: [
