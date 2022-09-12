@@ -1,18 +1,33 @@
-html,
-body {
+@import '@/styles/variables';
+@import '@/styles/Shared.module';
+
+/* Intuitive sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove all margins and padding */
+* {
   padding: 0;
   margin: 0;
-  font-family: 'Helvetica Neue', 'Helvetica', -apple-system, Arial, sans-serif;
+}
+
+/* Make percentage heights work */
+html,
+body {
+  height: 100%;
+}
+
+html,
+body {
+  font-family: $font--main;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-html,
-body,
-#__next {
-  height: 100%;
+  // scroll-behavior: smooth;
 }
 
 img,
@@ -46,9 +61,14 @@ a {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: none;
+  background: none;
   text-decoration: none;
   list-style-type: none;
   outline: none;
   border: none;
+}
+
+svg {
+  width: 24px;
+  height: auto;
 }

@@ -1,0 +1,60 @@
+// Load fonts
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@500&display=swap');
+
+//
+// Colors
+//
+
+// Light
+$color--light-100: #ffffff;
+$color--light-200: #fcfcfc;
+$color--light-300: #fafafa;
+$color--light-400: #f4f4f4;
+$color--light-500: #eeeeee;
+$color--light-700: #dddddd;
+$color--light-900: #cccccc;
+
+// Dark
+$color--dark-100: #999;
+$color--dark-300: #777;
+$color--dark-500: #555;
+$color--dark-700: #333;
+$color--dark-900: #111;
+
+// Red
+$color--red-100: #ffe4e4;
+$color--red-200: #ffbbbb;
+$color--red-500: #f30614;
+$color--red-600: #dd0614;
+$color--red-700: #d0010f;
+
+//
+// Backgrounds
+//
+
+// Red
+$background--red: radial-gradient(
+    91.92% 103.83% at 52.58% 7.93%,
+    #d20e18 0%,
+    rgba(235, 13, 13, 0) 100%
+  ),
+  radial-gradient(110.86% 195.37% at -5.08% 9.63%, #f5311b 0%, rgba(235, 13, 13, 0) 100%),
+  radial-gradient(172.53% 149.92% at 104.11% 0%, #f5253a 0%, rgba(255, 0, 15, 0) 100%),
+  linear-gradient(0deg, #b00a28, #b00a28), #ffffff;
+// $background--red: radial-gradient(
+//     91.92% 103.83% at 52.58% 7.93%,
+//     #cc0c17 0%,
+//     rgba(235, 13, 13, 0) 100%
+//   ),
+//   radial-gradient(110.86% 195.37% at -5.08% 9.63%, #ff4d15 0%, rgba(235, 13, 13, 0) 100%),
+//   radial-gradient(172.53% 149.92% at 104.11% 0%, #ff3d83 0%, rgba(255, 0, 15, 0) 100%),
+//   linear-gradient(0deg, #f43686, #f43686), #ffffff;
+
+//
+// Fonts
+//
+
+$font--main: 'Helvetica Neue', 'Helvetica', -apple-system, 'Arial', sans-serif;
+// $font--secondary: 'Roboto', -apple-system, 'Helvetica Neue', 'Helvetica Neue', 'Helvetica', 'Arial',
+//   sans-serif;
+// $font--mono: 'Roboto Mono', monospace;
