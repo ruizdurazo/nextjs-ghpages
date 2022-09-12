@@ -238,9 +238,9 @@ export const Navbar = ({ t, refs }: NavbarProps) => {
               {/* Icon */}
               <IconGlobe />
               {/* Label */}
-              <div className={`${styles['menu__item--label']}`}>
+              {/* <div className={`${styles['menu__item--label']}`}>
                 {locale === 'de' ? <>Deutsch</> : <>English</>}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

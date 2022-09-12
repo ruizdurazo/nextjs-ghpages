@@ -216,10 +216,14 @@
       display: block;
       padding: 12px 26px;
       border-radius: 24px;
-      -webkit-appearance: none;
+      // -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      color: transparent;
+      // color: transparent;
+      color: inherit;
+      font: inherit;
+      text-transform: inherit;
+      margin-left: 32px;
       border: none;
       outline: transparent;
       overflow: hidden;
@@ -230,31 +234,33 @@
         cursor: pointer;
       }
 
-      // &:focus-visible {
-      //   box-shadow: 0 0 0 4px lightgreen;
-      // }
+      & option {
+        -webkit-appearance: initial;
+        -moz-appearance: initial;
+        appearance: initial;
+      }
 
       &.german {
-        width: 186px;
+        width: calc(186px - 32px);
 
         @media screen and (max-width: 480px) {
-          width: 164px;
+          width: calc(164px - 32px);
         }
       }
 
       &.english {
-        width: 178px;
+        width: calc(178px - 32px);
 
         @media screen and (max-width: 480px) {
-          width: 158px;
+          width: calc(158px - 32px);
         }
       }
 
       &.spanish {
-        width: 186px;
+        width: calc(186px - 32px);
 
         @media screen and (max-width: 480px) {
-          width: 164px;
+          width: calc(164px - 32px);
         }
       }
     }
