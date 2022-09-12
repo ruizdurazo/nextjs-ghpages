@@ -23,7 +23,7 @@ export const useRedirect = (to?: string) => {
       ? router.asPath.slice(1)
       : detectedLng
 
-    console.log(router, detectedLng)
+    // console.log(router, detectedLng)
 
     if (detectedLng && detectedLng !== locale) {
       // locale = detectedLng
