@@ -18,7 +18,7 @@ const texts = {
 
       // Preview del video - 1440x720px
       preview: 'nextjs-ghpages/hero_preview.jpg', // for testing
-      // heroPreview: 'hero_preview.jpg',
+      // preview: 'hero_preview.jpg',
     },
 
     // Galeria

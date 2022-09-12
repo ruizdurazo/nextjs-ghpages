@@ -105,10 +105,13 @@ const Home: NextPage = () => {
                 <motion.div initial="hidden" animate="visible" variants={videoAnimation}>
                   <video
                     ref={videoRef}
-                    // autoPlay
+                    autoPlay
                     width="1440"
                     height="720"
                     loop
+                    muted
+                    playsInline
+                    onContextMenu={() => false}
                     poster={`/${t.images.hero.preview}`}
                     onClick={() => playPauseVideo()}
                   >
