@@ -270,15 +270,15 @@ export const Navbar = ({ t, refs }: NavbarProps) => {
                 ${locale === 'en' && styles['english']}
                 `}
               >
-                <option className="" value="de" label="Deutsch" />
-                <option className="" value="en" label="English" />
+                <option value="de" label="Deutsch" />
+                <option value="en" label="English" />
               </select>
               {/* Icon */}
               <IconGlobe />
               {/* Label */}
-              <div className={`${styles['menu__item--label']}`}>
+              {/* <div className={`${styles['menu__item--label']}`}>
                 {locale === 'de' ? <>Deutsch</> : <>English</>}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
