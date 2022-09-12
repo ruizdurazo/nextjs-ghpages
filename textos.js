@@ -7,7 +7,8 @@ const texts = {
 
   images: {
     // socialShare: 'https://bailarico.ch/social.png',
-    socialShare: 'https://ruizdurazo.github.io/nextjs-ghpages/social.png', // for testing
+    // socialShare: 'https://ruizdurazo.github.io/nextjs-ghpages/social.png', // for testing
+    socialShare: 'social.png', // for testing
     // socialShare: '',
 
     // Home page hero
