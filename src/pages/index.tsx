@@ -109,10 +109,10 @@ const Home: NextPage = () => {
                     width="1440"
                     height="720"
                     loop
-                    poster="/hero_preview.jpg"
+                    poster={t.images.hero.preview}
                     onClick={() => playPauseVideo()}
                   >
-                    <source src="/hero.mp4" type="video/mp4" />
+                    <source src={t.images.hero.video} type="video/mp4" />
                     Your browser doesn't support HTML5 video tag.
                   </video>
                 </motion.div>

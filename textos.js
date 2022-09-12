@@ -10,13 +10,16 @@ const texts = {
     socialShare: 'https://ruizdurazo.github.io/nextjs-ghpages/social.png',
     // socialShare: '',
 
-    // Video - 1440x720px - recomendacion: no mayor a 30-40MB
-    heroVideo: 'nextjs-ghpages/hero.mp4',
-    // heroVideo: 'hero.mp4',
+    // Home page hero
+    hero: {
+      // Video - 1440x720px - recomendacion: no mayor a 30-40MB
+      video: 'nextjs-ghpages/hero.mp4',
+      // video: 'hero.mp4',
 
-    // Preview del video - 1440x720px
-    heroPreview: 'nextjs-ghpages/hero_preview.jpg',
-    // heroPreview: 'hero_preview.jpg',
+      // Preview del video - 1440x720px
+      preview: 'nextjs-ghpages/hero_preview.jpg',
+      // heroPreview: 'hero_preview.jpg',
+    },
 
     // Galeria
     // Poner FOTOS de galeria en `public/images/gallery` formatos: .jpg, .jpeg, .png

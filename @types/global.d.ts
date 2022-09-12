@@ -22,6 +22,10 @@ interface TeamMember {
 
 // Images
 interface Images {
+  hero: {
+    video: string
+    preview: string
+  }
   socialShare: string
   photosAndVideos: string[]
   socialMedia: string[]
