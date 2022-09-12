@@ -7,14 +7,20 @@ const texts = {
 
   images: {
     // socialShare: 'https://bailarico.ch/social.png',
-    // socialShare: 'https://ruizdurazo.github.io/nextjs-ghpages/social.png',
-    socialShare: '',
-    // 1440x720px - recomendacion: no mayor a 30-40MB
-    heroVideo: 'hero.mp4',
-    // 1440x720px
-    heroPreview: 'hero_preview.jpg',
-    // Poner FOTOS de galeria en `public/images/gallery` formatos: jpg, jpeg, png
-    // Poner VIDEOS de galeria en `public/videos/gallery` formato: mp4
+    socialShare: 'https://ruizdurazo.github.io/nextjs-ghpages/social.png',
+    // socialShare: '',
+
+    // Video - 1440x720px - recomendacion: no mayor a 30-40MB
+    heroVideo: 'nextjs-ghpages/hero.mp4',
+    // heroVideo: 'hero.mp4',
+
+    // Preview del video - 1440x720px
+    heroPreview: 'nextjs-ghpages/hero_preview.jpg',
+    // heroPreview: 'hero_preview.jpg',
+
+    // Galeria
+    // Poner FOTOS de galeria en `public/images/gallery` formatos: .jpg, .jpeg, .png
+    // Poner VIDEOS de galeria en `public/videos/gallery` formato: .mp4
     // VIDEOS de YouTube deben incluir `https://www.youtube.com/embed/` y luego el ID del video
     photosAndVideos: [
       //
@@ -35,6 +41,8 @@ const texts = {
       'hero_v1.mp4',
       'https://www.youtube.com/embed/VKUq_-etNLQ',
     ],
+
+    //
     socialMedia: [
       //
       '1.jpg',
@@ -46,6 +54,8 @@ const texts = {
       '7.jpg',
       '8.jpg',
     ],
+
+    //
     studio: {
       //
       interior: 'interior.jpg',
@@ -116,7 +126,8 @@ const texts = {
         title: 'Kompletter Kursplan',
         description: 'inkl. Kursbeschreibungen und weitere Details.',
         button: 'PDF herunterladen',
-        file: '2022-01-Kursplan-BailaRico.pdf', // PDF file
+        file: 'nextjs-ghpages/2022-01-Kursplan-BailaRico.pdf', // PDF file
+        // file: '2022-01-Kursplan-BailaRico.pdf', // PDF file
       },
       // Registration
       registration: {
@@ -348,7 +359,8 @@ const texts = {
         title: 'Full Schedule',
         description: 'including class descriptions and other details.',
         button: 'Download PDF',
-        file: '2022-01-Schedule-BailaRico.pdf', // PDF file
+        file: 'nextjs-ghpages/2022-01-Schedule-BailaRico.pdf', // PDF file
+        // file: '2022-01-Schedule-BailaRico.pdf', // PDF file
       },
       // Registration
       registration: {
