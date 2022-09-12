@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Disallow: /
+
+# Host
+# Host: https://bailarico.ch
+
+# Sitemaps
+# Sitemap: https://bailarico.ch/sitemap.xml
+# Sitemap: https://bailarico.ch/sitemap-0.xml
