@@ -7,17 +7,17 @@ const texts = {
 
   images: {
     // socialShare: 'https://bailarico.ch/social.png',
-    socialShare: 'https://ruizdurazo.github.io/nextjs-ghpages/social.png',
+    socialShare: 'https://ruizdurazo.github.io/nextjs-ghpages/social.png', // for testing
     // socialShare: '',
 
     // Home page hero
     hero: {
       // Video - 1440x720px - recomendacion: no mayor a 30-40MB
-      video: 'nextjs-ghpages/hero.mp4',
+      video: 'nextjs-ghpages/hero.mp4', // for testing
       // video: 'hero.mp4',
 
       // Preview del video - 1440x720px
-      preview: 'nextjs-ghpages/hero_preview.jpg',
+      preview: 'nextjs-ghpages/hero_preview.jpg', // for testing
       // heroPreview: 'hero_preview.jpg',
     },
 
