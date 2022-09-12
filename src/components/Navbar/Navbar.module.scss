@@ -1,0 +1,343 @@
+@import '@/styles/variables';
+
+.navbar {
+  z-index: 1000;
+  // position: static;
+  // position: sticky;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  outline: 1px solid transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.7s, box-shadow 0.7s, outline 0.7s, padding 0.3s,
+    backdrop-filter 0.3s;
+  padding: 8px 0;
+
+  //
+  // Logo
+  //
+
+  & .logo {
+    flex: none;
+    padding: 14px 16px 10px;
+    border-radius: 12px;
+    color: $color--light-100;
+    transition: color 0.7s;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 4px lightgreen;
+    }
+
+    @media screen and (max-width: 480px) {
+      padding: 12px 12px 8px;
+    }
+
+    @media screen and (max-width: 400px) {
+      padding: 8px 8px 6px;
+    }
+
+    & svg {
+      transition: max-height 0.7s;
+      width: auto;
+      height: 56px;
+      max-height: 56px;
+
+      @media screen and (max-width: 480px) {
+        max-height: 48px;
+      }
+
+      @media screen and (max-width: 400px) {
+        max-height: 40px;
+      }
+    }
+  }
+
+  &.background {
+    padding: 4px 0 4px;
+
+    // background-color: $color--light-100;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(16px) saturate(160%);
+    // outline: 1px solid $color--light-100;
+    // box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 0 16px 32px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 16px 48px rgba(0, 0, 0, 0.02);
+
+    & .logo {
+      color: $color--dark-900;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      & svg {
+        max-height: 48px;
+
+        @media screen and (max-width: 480px) {
+          max-height: 40px;
+        }
+      }
+    }
+
+    & .menu {
+      & .menu__item {
+        color: $color--dark-700;
+        background-color: rgba(0, 0, 0, 0.03);
+
+        &:hover {
+          color: $color--dark-900;
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+  //
+  // Desktop
+  //
+
+  & .content--desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1440px, calc(100% - 40px));
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  //
+  // Mobile
+  //
+
+  & .content--mobile {
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: min(1440px, calc(100% - 20px));
+    }
+  }
+
+  //
+  // Menus
+  //
+
+  & .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 -10px;
+
+    & > * {
+      margin: 10px;
+    }
+
+    &.menu--left,
+    &.menu--right {
+      min-width: 400px;
+    }
+
+    &.menu--left {
+      justify-content: flex-start;
+    }
+
+    &.menu--right {
+      justify-content: flex-end;
+    }
+
+    & .menu__item {
+      position: relative;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+      padding: 12px 26px;
+      border-radius: 24px;
+      text-transform: uppercase;
+      color: $color--light-100;
+      transition: color 0.3s, background-color 0.3s;
+      background-color: rgba(255, 255, 255, 0.07);
+      overflow: hidden;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+
+      &:focus-visible {
+        box-shadow: 0 0 0 4px lightgreen;
+      }
+
+      &--select {
+        padding: 0;
+
+        &:focus-within {
+          box-shadow: 0 0 0 4px lightgreen;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      & .menu__item--label {
+        pointer-events: none;
+        position: absolute;
+        top: 12px;
+        right: 24px;
+        padding: 0 4px;
+      }
+
+      & svg {
+        pointer-events: none;
+        position: absolute;
+        left: 24px;
+        top: 12px;
+
+        @media screen and (max-width: 480px) {
+          width: 20px;
+        }
+      }
+    }
+
+    select {
+      display: block;
+      padding: 12px 26px;
+      border-radius: 24px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      color: transparent;
+      border: none;
+      outline: transparent;
+      overflow: hidden;
+      width: fit-content;
+      // pointer-events: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      // &:focus-visible {
+      //   box-shadow: 0 0 0 4px lightgreen;
+      // }
+
+      &.german {
+        width: 186px;
+
+        @media screen and (max-width: 480px) {
+          width: 164px;
+        }
+      }
+
+      &.english {
+        width: 178px;
+
+        @media screen and (max-width: 480px) {
+          width: 158px;
+        }
+      }
+
+      &.spanish {
+        width: 186px;
+
+        @media screen and (max-width: 480px) {
+          width: 164px;
+        }
+      }
+    }
+  }
+}
+
+// Mobile menu
+
+.mobile-menu {
+  overflow: hidden;
+  display: none;
+  width: 100%;
+  padding: 104px 20px 20px;
+  background: $background--red;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 96px 12px 20px;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 88px 12px 20px;
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -10px;
+
+    & > * {
+      margin: 5px 10px;
+    }
+
+    @media screen and (max-width: 480px) {
+      justify-content: space-between;
+
+      margin: 0 -5px;
+
+      & > * {
+        margin: 5px;
+      }
+    }
+  }
+
+  & .menu__item {
+    position: relative;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    padding: 12px 26px;
+    border-radius: 24px;
+    text-transform: uppercase;
+    color: $color--light-100;
+    transition: color 0.3s, background-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.07);
+    overflow: hidden;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 4px lightgreen;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px 24px;
+    }
+
+    @media screen and (max-width: 400px) {
+      padding: 10px 20px;
+    }
+  }
+}

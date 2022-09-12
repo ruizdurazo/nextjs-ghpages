@@ -1,0 +1,125 @@
+@import '@/styles/variables';
+
+.team-member {
+  //
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 516px;
+  width: 340px;
+
+  & img {
+    border-radius: 4px;
+  }
+
+  & .details {
+    //
+    position: relative;
+    // & .main {
+    display: flex;
+    // flex-direction: row;
+    flex-direction: column;
+    // justify-content: space-between;
+    // align-items: center;
+    top: 0;
+    // transition: top 0.2s ease, background-color 0.3s 0.1s;
+    transition: top 0.2s ease-in-out, background-color 0.4s 0.1s ease;
+    background-color: #ffffff00;
+    height: 420px;
+    // height: 100%;
+    padding: 0 10px;
+
+    & .name-job {
+      padding: 20px 0 24px;
+      // height: ;
+      width: calc(100% - 56px);
+
+      & .name {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        color: $color--dark-900;
+      }
+
+      & .job {
+        // font-weight: 500;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        // letter-spacing: 0.02em;
+        letter-spacing: 0.01em;
+        // color: $color--dark-100;
+        color: $color--dark-300;
+        // color: $color--dark-500;
+      }
+    }
+
+    & .summary {
+      // font-weight: 500;
+      font-weight: 400;
+      // font-size: 16px;
+      font-size: 17px;
+      // font-size: 18px;
+      // line-height: 22px;
+      line-height: 24px;
+      // letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
+      // color: $color--dark-500;
+      color: $color--dark-700;
+      width: calc(100% - 36px);
+      // width: calc(100% - 48px);
+      // width: calc(100% - 56px);
+      opacity: 0;
+      transition: opacity 0.1s ease;
+
+      & p {
+        margin-bottom: 22px;
+      }
+    }
+    // }
+
+    &.details--open {
+      top: -420px;
+      // background-color: #ffffffe9;
+      background-color: #ffffffee;
+
+      & .summary {
+        opacity: 1;
+      }
+    }
+  }
+
+  & .button {
+    position: absolute;
+    bottom: 25px;
+    right: 5px;
+    padding: 8px;
+    border-radius: 50%;
+    border: 1px solid $color--light-500;
+    height: max-content;
+    background-color: $color--light-100;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 4px lightgreen;
+    }
+
+    & svg {
+      position: relative;
+      width: 32px;
+      height: auto;
+      pointer-events: none;
+      transition: transform 0.3s;
+    }
+
+    &.button--open {
+      & svg {
+        transform: rotate(0.125turn);
+      }
+    }
+  }
+}

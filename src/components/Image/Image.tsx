@@ -1,110 +1,88 @@
-// import React, { useEffect, useState } from 'react'
 import React, { useEffect, useRef, useState } from 'react'
 
 import styles from './Image.module.scss'
 
 interface ImageProps {
   src: string
-  placeholder: string
-  width: number
-  height: number
-  alt: string | ''
+  placeholder?: string
+  width?: number
+  height?: number
+  alt: string
 }
 
-export const Image = ({ src, placeholder, width, height, alt }: ImageProps) => {
+export const Image = ({ src, placeholder, width, height, alt = '' }: ImageProps) => {
+  //
+  // State
+  //
+
   const [isImageLoaded, setIsImageLoaded] = useState(false)
 
-  // console.log(src)
-  // const image = useRef() as
-  // const image = React.createRef<HTMLImageElement>()
+  //
+  // Refs
+  //
+
   const image = useRef<HTMLImageElement>() as React.MutableRefObject<HTMLImageElement>
 
-  useEffect(() => {
-    // image.addEventListener('load', handleBackDropClick)
-    // console.log(image)
+  //
+  // useEffects
+  //
 
+  useEffect(() => {
     if (image.current?.complete) setIsImageLoaded(true)
   }, [])
 
   const handleLoad = () => {
-    // console.log('boop')
-
     setIsImageLoaded(true)
   }
+
+  //
+  // Template
+  //
 
   return (
     <>
       {/* Content */}
-      <div
-        className={styles.test}
-        // style={{ backgroundImage: `url(${src}?lqip)` }}
-        // style={isImageLoaded ? { backgroundImage: `url(${src}?lqip)` } : {}}
-      >
+      <div className={styles.container}>
         {/* Placeholder image */}
-        {/* // src={`${src}?lqip`} */}
-        {/* src={require(`${src}?lqip`)} */}
-        <img
-          src={`${placeholder}`}
-          width={width}
-          height={height}
-          alt={alt}
-          style={isImageLoaded ? { display: 'none' } : {}}
-          className={styles.placeholder}
-        />
+        {placeholder && (
+          <img
+            src={`${require(`public/images/${placeholder}?lqip`)}`}
+            // src={`${require(`public/images/gallery/${placeholder}?lqip`)}`} // 'public/images/gallery/' in component
+            // src={`${require('public/images/gallery/image00001.jpeg?lqip')}`}
+            // src={`${require('../../../public/images/gallery/image00001.jpeg?lqip')}`}
+            // src={`${require(placeholder)}`}
+            // src={`${require(`../../../${placeholder}?lqip`)}`}
+            // src={placeholder}
+            // src={`${placeholder}`}
+            // src={dynamic(() => import('./path/to/about'))}
+            // src={require(`.${placeholder}`)}
+            // src={`${require(placeholder)}`}
+            // src={`${require(placeholder)}?lqip`}
+            // width={1200}
+            // height={800}
+            width={width ? width : undefined}
+            height={height ? height : undefined}
+            alt={alt}
+            style={isImageLoaded ? { display: 'none' } : { position: 'relative' }}
+            className={styles.placeholder}
+          />
+        )}
+
         {/* Final image */}
-        {/* // src={src} */}
-        {/* src={require(`${src}`)} */}
         <img
           onLoad={handleLoad}
           ref={image}
-          // onLoad={() => {
-
-          //   setIsImageLoaded(true)
-          // }}
           src={`${
             process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH : ''
           }${src}`}
-          width={width}
-          height={height}
+          width={width ? width : undefined}
+          height={height ? height : undefined}
           alt={alt}
-          style={isImageLoaded ? {} : { display: 'none' }}
-          // loading="lazy"
+          style={isImageLoaded ? { position: 'relative' } : { display: 'none' }}
+          // loading= "lazy"
+          className={styles.image}
         />
       </div>
     </>
   )
 }
-
-// import LazyLoad from "react-lazyload";
-
-// const WebImage = props => {
-//   return (
-//     <LazyLoad
-//       once
-//       placeholder={
-//         <img
-//           src={require(`../static/${props.src}?lqip`)}
-//           className={props.className}
-//         />
-//       }
-//     >
-//       <picture className={props.className}>
-//         <source
-//           srcset={require(`../static/${props.src}?webp`)}
-//           type="image/webp"
-//         />
-//         <source
-//           srcset={require(`../static/${props.src}`)}
-//           type={props.mimeType}
-//         />
-//         <img
-//           src={require(`../static/${props.src}`)}
-//           alt={props.alt}
-//           className={props.className}
-//         />
-//       </picture>
-//     </LazyLoad>
-//   );
-// };
-
-// export default WebImage;

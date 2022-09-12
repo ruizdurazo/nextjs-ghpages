@@ -1,0 +1,1 @@
+export { SectionSocialMedia } from './SectionSocialMedia'
