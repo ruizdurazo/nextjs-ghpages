@@ -1,72 +1,166 @@
-import React from 'react'
-
+import React, { useEffect, useRef } from 'react'
 import type { NextPage } from 'next'
-import Head from 'next/head'
-// import dynamic from 'next/dynamic'
-// import Image from 'next/image'
+import { motion } from 'framer-motion'
 
-import { Image } from '@/components/Image'
-// const Image = dynamic(() => import('../components/Image'))
+import { Layout } from '@/components/Layout'
+import { SectionTeam } from '@/components/SectionTeam'
+import { SectionContact } from '@/components/SectionContact'
+import { SectionCourses } from '@/components/SectionCourses'
+import { SectionPhotos } from '@/components/SectionPhotos'
+import { SectionSocialMedia } from '@/components/SectionSocialMedia'
 
-import styles from '../styles/Home.module.scss'
+import styles from '@/styles/Home.module.scss'
 
-import texts from '../../textos.js'
+import { parseParagraph } from '@/utils/parseTexts'
 
-import hero from '../../public/images/imagen-prueba.jpeg'
-// @ts-ignore
-import heroP from '../../public/images/imagen-prueba.jpeg?lqip'
+import { AnimatedText } from '@/components/AnimatedText'
+
+import useTextsGenerator from 'src/hooks/useTextsGenerator'
+import { useRedirect } from 'src/hooks/useRedirect'
 
 const Home: NextPage = () => {
+  //
+  // Router
+  //
+
+  const locale = useRedirect()
+
+  const t = useTextsGenerator(locale)
+
+  //
+  // State
+  //
+
+  const words = t.hero.title.middle.length > 0 ? t.hero.title.middle : ['Salsa']
+
+  //
+  // Animations
+  //
+
+  const videoAnimation = {
+    hidden: {
+      scale: 0.8,
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      y: 0,
+      scale: 1,
+      opacity: 1,
+      transition: {
+        delay: 0.3,
+        // duration: 0.4,
+      },
+    },
+  }
+
+  //
+  // useRefs
+  //
+
+  const videoRef = useRef<HTMLVideoElement>(null) as React.MutableRefObject<HTMLVideoElement>
+  const coursesRef = useRef<HTMLDivElement>(null) as React.MutableRefObject<HTMLDivElement>
+  const photosRef = useRef<HTMLDivElement>(null) as React.MutableRefObject<HTMLDivElement>
+  const contactRef = useRef<HTMLDivElement>(null) as React.MutableRefObject<HTMLDivElement>
+
+  //
+  // useEffects
+  //
+
+  useEffect(() => {
+    // videoRef.current.play()
+
+    setTimeout(() => {
+      if (videoRef.current.paused) {
+        videoRef.current.play()
+      }
+    }, 400)
+  }, [])
+
+  //
+  // Methods
+  //
+
+  const playPauseVideo = () => {
+    if (videoRef.current.currentTime > 0 && !videoRef.current.paused) {
+      videoRef.current.pause()
+    } else {
+      videoRef.current.play()
+    }
+  }
+
+  //
+  // Template
+  //
+
   return (
     <>
-      <Head>
-        <title key="title">{texts.deutsch.meta.pageTitle}</title>
-        <meta key="description" name="description" content={texts.deutsch.meta.pageDescription} />
-      </Head>
+      <Layout refs={[coursesRef, photosRef, contactRef]}>
+        <div className={styles['container']}>
+          <main className={styles['main']}>
+            {/* Hero */}
+            <div className={`${styles['hero']}`}>
+              {/* Video */}
+              <div className={`${styles['video']}`}>
+                <motion.div initial="hidden" animate="visible" variants={videoAnimation}>
+                  <video
+                    ref={videoRef}
+                    // autoPlay
+                    width="1440"
+                    height="720"
+                    loop
+                    poster="/hero_preview.jpg"
+                    onClick={() => playPauseVideo()}
+                  >
+                    <source src="/hero.mp4" type="video/mp4" />
+                    Your browser doesn't support HTML5 video tag.
+                  </video>
+                </motion.div>
+              </div>
 
-      <div className={styles.container}>
-        <main className={styles.main}>
-          {/* <Image alt="" src={hero} placeholder="blur" width={700} height={475} /> */}
-          {/* <Image alt="" src={hero} width={700} height={475} /> */}
-          {/* <img src={`/images/imagen-prueba.jpeg`} alt="" width={700} height={475} /> */}
+              {/* Title */}
+              <h1 className={styles['title']}>
+                <div>{t.hero.title.top}</div>
+                <AnimatedText words={words} />
+                <div>{t.hero.title.bottom}</div>
+              </h1>
 
-          {/* <Image src="../../public/images/imagen-prueba.jpeg" alt="" width={700} height={475} /> */}
-          <Image src={hero} placeholder={heroP} alt="" width={700} height={475} />
-          {/* 
-        <div className={styles.test}>
-          <img
-            src={require('../../public/images/imagen-prueba.jpeg?lqip')}
-            width={700}
-            height={475}
-            style={{ filter: 'blur(25px)' }}
-          />
-          <img src={hero} alt="" width={700} height={475} />
-        </div> */}
+              {/* Text */}
+              <div className={`${styles['text']}`}>
+                {t.hero.intro.map((introText: any, index) => {
+                  return (
+                    <p
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: parseParagraph(introText) }}
+                    />
+                  )
+                })}
+              </div>
+            </div>
 
-          <h1 className={styles.title}>
-            <div>{texts.deutsch.hero.title.top}</div>
-            <div>{texts.deutsch.hero.title.bottom}</div>
-          </h1>
+            {/* Courses */}
+            <div ref={coursesRef}>
+              <SectionCourses t={t} />
+            </div>
 
-          <div className={styles.description}>
-            {texts.deutsch.hero.intro.map((introText: any, index) => {
-              let out
-              let match = introText.match(/\*[^]*?\*/g)
-              if (match) {
-                match.forEach((i: any) => {
-                  let mark_element = '<span>' + i.slice(1, -1) + '</span>'
-                  introText = introText.replace(i, mark_element)
-                  out = introText
-                })
-              } else {
-                out = introText
-              }
+            {/* Photos */}
+            <div ref={photosRef}>
+              <SectionPhotos t={t} />
+            </div>
 
-              return <p key={index} dangerouslySetInnerHTML={{ __html: out }} />
-            })}
-          </div>
-        </main>
-      </div>
+            {/* Social Media */}
+            <SectionSocialMedia t={t} />
+
+            {/* Team */}
+            <SectionTeam t={t} />
+
+            {/* Contact */}
+            <div ref={contactRef}>
+              <SectionContact t={t} />
+            </div>
+          </main>
+        </div>
+      </Layout>
     </>
   )
 }
