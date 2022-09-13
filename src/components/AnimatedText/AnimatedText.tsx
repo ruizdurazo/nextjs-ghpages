@@ -89,7 +89,8 @@ export const AnimatedText = ({ words }: AnimatedTextProps) => {
           // console.log(word)
           // console.log(wordCounter)
         }
-      }, 2950)
+        // }, 2950)
+      }, 2450)
     }, 50)
   }, [word, wordCounter, words])
 

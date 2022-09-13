@@ -149,7 +149,7 @@ export const Navbar = ({ t, refs }: NavbarProps) => {
 
   return (
     <>
-      <nav className={`${styles['navbar']} ${scrollPosition > 80 && styles['background']}`}>
+      <nav className={`${styles['navbar']} ${scrollPosition > 40 && styles['background']}`}>
         {/* Desktop */}
         <div className={`${styles['content--desktop']} `}>
           {/* Left Menu */}
