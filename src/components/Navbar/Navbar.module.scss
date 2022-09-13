@@ -217,8 +217,8 @@
       // display: block;
       padding: 12px 26px;
       // border-radius: 24px;
-      -webkit-appearance: none;
-      -moz-appearance: none;
+      // -webkit-appearance: none;
+      // -moz-appearance: none;
       // // appearance: none;
       // // color: transparent;
       color: inherit;
@@ -226,7 +226,7 @@
       // // text-transform: none;
       text-transform: uppercase;
       margin-left: 32px;
-      // background-color: transparent;
+      background-color: transparent;
       // border: none;
       // outline: transparent;
       // overflow: hidden;
@@ -245,6 +245,7 @@
         // min-height: 1.2em;
         // padding: 0px 2px 1px;
         // font-size: 20px;
+        background-color: initial;
       }
 
       &.german {
