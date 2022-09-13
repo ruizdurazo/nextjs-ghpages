@@ -213,6 +213,7 @@
     }
 
     select {
+      all: initial;
       // position: relative;
       // display: block;
       padding: 12px 26px;
@@ -222,10 +223,13 @@
       // // appearance: none;
       // // color: transparent;
       color: inherit;
-      // font: inherit;
+      font: inherit;
+      font-weight: 600;
       // // text-transform: none;
+      font-family: $font--main;
       text-transform: uppercase;
       margin-left: 32px;
+      letter-spacing: 0.04em;
       background-color: transparent;
       // border: none;
       // outline: transparent;
@@ -238,6 +242,7 @@
       }
 
       & option {
+        all: initial;
         // text-transform: none;
         // font-weight: normal;
         // display: block;
