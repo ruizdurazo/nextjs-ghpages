@@ -213,38 +213,38 @@
     }
 
     select {
-      position: relative;
-      display: block;
+      // position: relative;
+      // display: block;
       padding: 12px 26px;
-      border-radius: 24px;
+      // border-radius: 24px;
       -webkit-appearance: none;
       -moz-appearance: none;
-      // appearance: none;
-      // color: transparent;
+      // // appearance: none;
+      // // color: transparent;
       color: inherit;
-      font: inherit;
-      // text-transform: none;
+      // font: inherit;
+      // // text-transform: none;
       text-transform: uppercase;
       margin-left: 32px;
-      background-color: transparent;
-      border: none;
-      outline: transparent;
-      overflow: hidden;
-      // width: fit-content;
-      // pointer-events: none;
+      // background-color: transparent;
+      // border: none;
+      // outline: transparent;
+      // overflow: hidden;
+      // // width: fit-content;
+      // // pointer-events: none;
 
       &:hover {
         cursor: pointer;
       }
 
       & option {
-        text-transform: none;
-        font-weight: normal;
-        display: block;
-        white-space: nowrap;
-        min-height: 1.2em;
-        padding: 0px 2px 1px;
-        font-size: 20px;
+        // text-transform: none;
+        // font-weight: normal;
+        // display: block;
+        // white-space: nowrap;
+        // min-height: 1.2em;
+        // padding: 0px 2px 1px;
+        // font-size: 20px;
       }
 
       &.german {

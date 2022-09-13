@@ -224,7 +224,7 @@ export const Navbar = ({ t, refs }: NavbarProps) => {
             <div className={`${styles['menu__item']} ${styles['menu__item--select']}`}>
               {/* Select */}
               <select
-                onChange={(e) => onChangeLanguage(e)}
+                onChange={onChangeLanguage}
                 // defaultValue={locale}
                 value={locale}
                 className={`
@@ -263,7 +263,7 @@ export const Navbar = ({ t, refs }: NavbarProps) => {
             <div className={`${styles['menu__item']} ${styles['menu__item--select']}`}>
               {/* Select */}
               <select
-                onChange={(e) => onChangeLanguage(e)}
+                onChange={onChangeLanguage}
                 value={locale}
                 className={`
                 ${locale === 'de' && styles['german']} 
