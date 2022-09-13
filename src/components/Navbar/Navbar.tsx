@@ -232,8 +232,8 @@ export const Navbar = ({ t, refs }: NavbarProps) => {
                 ${locale === 'en' && styles['english']}
                 `}
               >
-                <option className="" value="de" label="Deutsch" />
-                <option className="" value="en" label="English" />
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
               </select>
               {/* Icon */}
               <IconGlobe />
@@ -270,8 +270,8 @@ export const Navbar = ({ t, refs }: NavbarProps) => {
                 ${locale === 'en' && styles['english']}
                 `}
               >
-                <option value="de" label="Deutsch" />
-                <option value="en" label="English" />
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
               </select>
               {/* Icon */}
               <IconGlobe />

@@ -213,45 +213,61 @@
     }
 
     select {
-      all: initial;
-      // position: relative;
+      // // all: initial;
+      // // position: relative;
       // display: block;
-      padding: 12px 26px;
+      // padding: 12px 26px;
       // border-radius: 24px;
       // -webkit-appearance: none;
       // -moz-appearance: none;
-      // // appearance: none;
-      // // color: transparent;
-      color: inherit;
-      font: inherit;
-      font-weight: 600;
-      // // text-transform: none;
-      font-family: $font--main;
-      text-transform: uppercase;
-      margin-left: 32px;
-      letter-spacing: 0.04em;
-      background-color: transparent;
+      // // // appearance: none;
+      // // // color: transparent;
+      // color: inherit;
+      // font: inherit;
+      // font-weight: 600;
+      // // // text-transform: none;
+      // font-family: $font--main;
+      // text-transform: uppercase;
+      // margin-left: 32px;
+      // letter-spacing: 0.04em;
+      // background-color: transparent;
       // border: none;
       // outline: transparent;
       // overflow: hidden;
-      // // width: fit-content;
+      // width: fit-content;
       // // pointer-events: none;
+
+      display: block;
+      padding: 12px 26px;
+      border-radius: 24px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      color: inherit;
+      font: inherit;
+      text-transform: inherit;
+      margin-left: 32px;
+      border: none;
+      outline: transparent;
+      overflow: hidden;
+      width: fit-content;
 
       &:hover {
         cursor: pointer;
       }
 
-      & option {
-        all: initial;
-        // text-transform: none;
-        // font-weight: normal;
-        // display: block;
-        // white-space: nowrap;
-        // min-height: 1.2em;
-        // padding: 0px 2px 1px;
-        // font-size: 20px;
-        background-color: initial;
-      }
+      // & option {
+      //   all: initial;
+      //   text-transform: none;
+      //   font-weight: normal;
+      //   display: block;
+      //   white-space: nowrap;
+      //   min-height: 1.2em;
+      //   padding: 0px 2px 1px;
+      //   font-size: 20px;
+      //   background-color: initial;
+      //   color: black;
+      // }
 
       &.german {
         width: calc(186px - 32px);

@@ -58,12 +58,12 @@ a {
 *,
 *:before,
 *:after {
-  // box-sizing: border-box;
-  // margin: 0;
-  // padding: 0;
-  // background: none;
-  // text-decoration: none;
-  // list-style-type: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  text-decoration: none;
+  list-style-type: none;
   outline: none;
   border: none;
 }
