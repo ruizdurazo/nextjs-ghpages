@@ -14,12 +14,12 @@ const texts = {
     // Home page hero
     hero: {
       // Video - 1440x720px - recomendacion: no mayor a 30-40MB
-      video: 'nextjs-ghpages/hero.mp4', // for testing
-      // video: 'hero.mp4',
+      // video: 'nextjs-ghpages/hero.mp4', // for testing
+      video: 'hero.mp4',
 
       // Preview del video - 1440x720px
-      preview: 'nextjs-ghpages/hero_preview.jpg', // for testing
-      // preview: 'hero_preview.jpg',
+      // preview: 'nextjs-ghpages/hero_preview.jpg', // for testing
+      preview: 'hero_preview.jpg',
     },
 
     // Galeria
@@ -79,7 +79,8 @@ const texts = {
     meta: {
       home: {
         pageTitle: 'BailaRico - Tanzschule für Salsa in Zürich',
-        pageDescription: 'Descriptive description',
+        pageDescription:
+          'Lerne Salsa tanzen in Zürich. BailaRico bietet Tanzkurse für Salsa On1, Salsa On2, Ladies Style, Urban, High Heels und Bachata an.',
       },
       error: {
         pageTitle: 'Seite nicht gefunden - Bailarico',
@@ -113,8 +114,8 @@ const texts = {
       },
       intro: [
         // Cada linea es un parrafo:
-        `*BailaRico* ist eine Tanzschule in Zürich.`,
-        `Seit über 10 Jahren bietet BailaRico Kurse für *Salsa&nbsp;On2* (NY&nbsp;/&nbsp;Mambo), *Salsa&nbsp;On1* (Puerto Rico&nbsp;/&nbsp;Linie), *Bachata*, *Ladies&nbsp;Style*, *Urban* und *High&nbsp;Heels*.`,
+        `*BailaRico*, deine Lieblings-Tanzschule in Zürich.`,
+        `Seit über 10 Jahren bietet BailaRico Kurse für *Salsa&nbsp;On1* (Linie), *Salsa&nbsp;On2* (NY&nbsp;/&nbsp;Mambo), *Ladies&nbsp;Style*, *High&nbsp;Heels*, *Urban* und *Bachata* an.`,
       ],
     },
 
@@ -127,18 +128,18 @@ const texts = {
       // saveCoursesImage: 'Bild speichern',
       // PDF cursos
       pdf: {
-        title: 'Kompletter Kursplan',
-        description: 'inkl. Kursbeschreibungen und weitere Details.',
+        title: 'Aktueller Kursplan',
+        // description: 'inkl. Kursbeschreibungen und weitere Details.',
         button: 'PDF herunterladen',
-        file: 'nextjs-ghpages/2022-01-Kursplan-BailaRico.pdf', // PDF file
-        // file: '2022-01-Kursplan-BailaRico.pdf', // PDF file
+        file: 'nextjs-ghpages/2022-10-Kursplan-BailaRico.pdf', // PDF file
+        // file: '2022-10-Kursplan-BailaRico.pdf', // PDF file
       },
       // Registration
       registration: {
         title: 'Anmeldung',
         text: [
           //
-          `Ruf uns an oder schreib uns eine Nachricht um dich anzumelden.`,
+          `Schreib uns eine Nachricht um dich anzumelden.`,
         ],
       },
       // Pricing
@@ -149,8 +150,6 @@ const texts = {
           `*CHF 25.-* für eine Einzelstunde.`,
           //
           `*CHF 220.-* für eine 10er Abo-Karte. 
-          <br>
-          Du sparst CHF 30.-! 
           <br>
           Abo-Karte gültig für alle Kurse!`,
           //
@@ -191,11 +190,11 @@ const texts = {
           job: 'Gründer / Leiter',
           summary: [
             //
-            `Also known as "The Mambo King", is a salsa dance instructor. Torres' technique developed from various sources including Afro-Cuban son, mambo, and North American jazz dance. He is one of the more popular dancers of New York style salsa.`,
+            // `Also known as "The Mambo King", is a salsa dance instructor. Torres' technique developed from various sources including Afro-Cuban son, mambo, and North American jazz dance. He is one of the more popular dancers of New York style salsa.`,
           ],
         },
         {
-          name: 'Muriel ????',
+          name: 'Muriel Lowis',
           job: 'Salsa, Bachata',
           summary: [
             //
@@ -203,21 +202,21 @@ const texts = {
           ],
         },
         {
-          name: 'Vesna ????',
+          name: 'Vesna Granulic',
           job: 'Salsa, Heels, Urban',
           summary: [
             //
-            `...`,
+            // `...`,
           ],
         },
-        {
-          name: '???? ????',
-          job: 'Salsa, ????',
-          summary: [
-            //
-            `...`,
-          ],
-        },
+        // {
+        //   name: '???? ????',
+        //   job: 'Salsa, ????',
+        //   summary: [
+        //     //
+        //     `...`,
+        //   ],
+        // },
       ],
     },
 
@@ -286,15 +285,15 @@ const texts = {
             `Sollten einzelne Regelungen oder Formulierungen dieses Haftungsausschlusses unwirksam sein oder werden, bleiben die übrigen Regelungen in ihrem Inhalt und ihrer Gültigkeit hiervon unberührt.`,
           ],
         },
-        {
-          title: 'Google Analytics',
-          text: [
-            `Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. („Google“). Google Analytics verwendet sog. „Cookies“, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringenDie im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können.`,
-            `Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren.`,
-            `Der aktuelle Link ist https://tools.google.com/dlpage/gaoptout.`,
-            `Google Analytics Bedingungen: https://www.google.com/analytics/terms/de.`,
-          ],
-        },
+        // {
+        //   title: 'Google Analytics',
+        //   text: [
+        //     `Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. („Google“). Google Analytics verwendet sog. „Cookies“, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringenDie im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können.`,
+        //     `Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren.`,
+        //     `Der aktuelle Link ist https://tools.google.com/dlpage/gaoptout.`,
+        //     `Google Analytics Bedingungen: https://www.google.com/analytics/terms/de.`,
+        //   ],
+        // },
       ],
     },
   },
@@ -311,7 +310,8 @@ const texts = {
     meta: {
       home: {
         pageTitle: 'BailaRico - Salsa Dance School in Zurich',
-        pageDescription: 'Descriptive description',
+        pageDescription:
+          'Learn to dance Salsa in Zurich. BailaRico offers dance classes for Salsa On1, Salsa On2, Ladies Style, Urban, High Heels and Bachata.',
       },
       error: {
         pageTitle: 'Page Not Found - Bailarico',
@@ -345,9 +345,8 @@ const texts = {
       },
       intro: [
         // Cada linea es un parrafo:
-        `*BailaRico* is a Salsa dance school in Zurich.`,
-        `For over 10 years, BailaRico has offered classes for *Salsa&nbsp;On2* (NY Mambo), *Salsa&nbsp;On1* (LA / Puerto Rico), *Bachata*, *Ladies&nbsp;Style*, *Urban*, and *High&nbsp;Heels*.`,
-        `Learn to dance Salsa in one of Switzerland's best latin dance schools!`,
+        `*BailaRico*, your favorite salsa dance school in Zurich.`,
+        `For over 10 years, BailaRico has offered dance classes for *Salsa*&nbsp;(On1), *Salsa&nbsp;On2* (NY&nbsp;/&nbsp;Mambo), *Ladies&nbsp;Style*, *Urban*, *High&nbsp;Heels*, and *Bachata*.`,
       ],
     },
 
@@ -360,10 +359,10 @@ const texts = {
       // saveCoursesImage: 'Save image',
       // PDF cursos
       pdf: {
-        title: 'Full Schedule',
-        description: 'including class descriptions and other details.',
+        title: 'Current Schedule',
+        // description: 'including class descriptions and other details.',
         button: 'Download PDF',
-        file: 'nextjs-ghpages/2022-01-Schedule-BailaRico.pdf', // PDF file
+        file: 'nextjs-ghpages/2022-20-Schedule-BailaRico.pdf', // PDF file
         // file: '2022-01-Schedule-BailaRico.pdf', // PDF file
       },
       // Registration
@@ -371,7 +370,7 @@ const texts = {
         title: 'Sign Up',
         text: [
           //
-          `Sign up for our classes by calling us or writing to us.`,
+          `Sign up for our classes by writing to us a message.`,
         ],
       },
       // Pricing
@@ -380,11 +379,7 @@ const texts = {
         text: [
           //
           `*CHF 25.-* for a single lesson.`,
-          `*CHF 220.-* for a 10-lesson Member Card. 
-          <br>
-          You save CHF 30.-! 
-          <br>
-          Card is valid for all our classes!`,
+          `*CHF 220.-* for a 10-lesson Member Card. Card is valid for all our classes!`,
         ],
       },
     },
@@ -421,11 +416,11 @@ const texts = {
           job: 'Founder / Director',
           summary: [
             //
-            `Also known as "The Mambo King", is a salsa dance instructor. Torres' technique developed from various sources including Afro-Cuban son, mambo, and North American jazz dance. He is one of the more popular dancers of New York style salsa.`,
+            // `...`,
           ],
         },
         {
-          name: 'Muriel ????',
+          name: 'Muriel Lowis',
           job: 'Salsa, Bachata',
           summary: [
             //
@@ -433,21 +428,21 @@ const texts = {
           ],
         },
         {
-          name: 'Vesna ????',
+          name: 'Vesna Granulic',
           job: 'Salsa, Heels, Urban',
           summary: [
             //
-            `Also known as "The Mambo King", is a salsa dance instructor. Torres' technique developed from various sources including Afro-Cuban son, mambo, and North American jazz dance. He is one of the more popular dancers of New York style salsa.`,
+            // `...`,
           ],
         },
-        {
-          name: '???? ????',
-          job: 'Salsa, ????',
-          summary: [
-            //
-            `...`,
-          ],
-        },
+        // {
+        //   name: '???? ????',
+        //   job: '????',
+        //   summary: [
+        //     //
+        //     `...`,
+        //   ],
+        // },
       ],
     },
 
@@ -471,7 +466,7 @@ const texts = {
       labelAddress: 'Location',
       address: {
         streetAndNumber: 'Hohlstrasse 192',
-        postcodeAndCity: '8004 Zürich',
+        postcodeAndCity: '8004 Zurich',
       },
       linkGoogleMaps: 'https://goo.gl/maps/VToqL3NG343hvrfR8',
       // Map button
@@ -482,7 +477,7 @@ const texts = {
     footer: {
       buttonScrollToTop: 'Scroll to Top',
       copyright: 'BailaRico.ch',
-      madeInDesktop: 'Made with 🍉 in Zürich',
+      madeInDesktop: 'Made with 🍉 in Zurich',
       madeInMobile: '🍉',
       linkToLegal: 'Legal',
     },
@@ -517,15 +512,15 @@ const texts = {
             `Should individual provisions or formulations of this disclaimer be or become invalid, the content and validity of the remaining provisions shall remain unaffected.`,
           ],
         },
-        {
-          title: 'Google Analytics',
-          text: [
-            `This website uses Google Analytics, a web analytics service provided by Google, Inc. ("Google"). Google Analytics uses "cookies", which are text files placed on your computer, to help the website analyze how users use the site. The information generated by the cookie about your use of this website is usually transmitted to a Google server in the USA and stored there. In the event that IP anonymization is activated on this website, however, your IP address will be truncated beforehand by Google within member states of the European Union or in other contracting states to the Agreement on the European Economic Area. Only in exceptional cases will the full IP address be transmitted to a Google server in the USA and shortened there. On behalf of the operator of this website, Google will use this information for the purpose of evaluating your use of the website, compiling reports on website activity and providing other services relating to website activity and internet usage to the website operatorThe IP address transmitted by your browser as part of Google Analytics will not be merged with other data held by Google. You may refuse the use of cookies by selecting the appropriate settings on your browser, however please note that if you do this you may not be able to use the full functionality of this website.`,
-            `You can also prevent the collection of data generated by the cookie and related to your use of the website (including your IP address) to Google and the processing of this data by Google by downloading and installing the browser plugin available under the following link.`,
-            `The current link is https://tools.google.com/dlpage/gaoptout.`,
-            `Google Analytics Terms: https://www.google.com/analytics/terms.`,
-          ],
-        },
+        // {
+        //   title: 'Google Analytics',
+        //   text: [
+        //     `This website uses Google Analytics, a web analytics service provided by Google, Inc. ("Google"). Google Analytics uses "cookies", which are text files placed on your computer, to help the website analyze how users use the site. The information generated by the cookie about your use of this website is usually transmitted to a Google server in the USA and stored there. In the event that IP anonymization is activated on this website, however, your IP address will be truncated beforehand by Google within member states of the European Union or in other contracting states to the Agreement on the European Economic Area. Only in exceptional cases will the full IP address be transmitted to a Google server in the USA and shortened there. On behalf of the operator of this website, Google will use this information for the purpose of evaluating your use of the website, compiling reports on website activity and providing other services relating to website activity and internet usage to the website operatorThe IP address transmitted by your browser as part of Google Analytics will not be merged with other data held by Google. You may refuse the use of cookies by selecting the appropriate settings on your browser, however please note that if you do this you may not be able to use the full functionality of this website.`,
+        //     `You can also prevent the collection of data generated by the cookie and related to your use of the website (including your IP address) to Google and the processing of this data by Google by downloading and installing the browser plugin available under the following link.`,
+        //     `The current link is https://tools.google.com/dlpage/gaoptout.`,
+        //     `Google Analytics Terms: https://www.google.com/analytics/terms.`,
+        //   ],
+        // },
       ],
     },
   },
