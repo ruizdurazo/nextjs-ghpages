@@ -54,7 +54,6 @@ export const SectionCourses = ({ t }: SectionCoursesProps) => {
             {/* PDF Card */}
             <div className={`${styles['pdf-card']}`}>
               <div className={`${styles['pdf-card__main']}`}>
-                {/* Image */}
                 <div className={`${styles['pdf-card__image']}`}>
                   <Image
                     src={`/images/courses-icon.png`}
@@ -65,16 +64,14 @@ export const SectionCourses = ({ t }: SectionCoursesProps) => {
                   />
                 </div>
 
-                {/* Text */}
                 <div>
                   <div className={`${styles['pdf-card__title']}`}>{t.courses.pdf.title}</div>
-                  <div className={`${styles['pdf-card__description']}`}>
+                  {/* <div className={`${styles['pdf-card__description']}`}>
                     {t.courses.pdf.description}
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
-              {/* Button */}
               <a
                 href={`/${t.courses.pdf.file}`}
                 target="_blank"

@@ -18,16 +18,17 @@ main {
       text-align: center;
       text-transform: uppercase;
       // margin-bottom: 80px;
-      margin-bottom: 72px;
+      // margin-bottom: 72px;
+      margin-bottom: 56px;
 
-      @media screen and (max-width: 1024px) {
-        margin-bottom: 64px;
-      }
+      // @media screen and (max-width: 1024px) {
+      //   margin-bottom: 64px;
+      // }
 
       @media screen and (max-width: 768px) {
         font-size: 48px;
         line-height: 48px;
-        margin-bottom: 56px;
+        // margin-bottom: 56px;
       }
 
       @media screen and (max-width: 480px) {

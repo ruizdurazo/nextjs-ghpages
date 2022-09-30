@@ -1,12 +1,13 @@
 @import '@/styles/variables';
 
 .social {
-  padding: 80px 0;
+  // padding: 80px 0;
+  padding: 64px 0;
   background: $background--red;
 
-  @media screen and (max-width: 1024px) {
-    padding: 64px 0;
-  }
+  // @media screen and (max-width: 1024px) {
+  //   padding: 64px 0;
+  // }
 
   @media screen and (max-width: 767px) {
     padding: 48px 0;
@@ -130,12 +131,12 @@
 
         @media screen and (max-width: 480px) {
           // width: min(460px, calc(33% - 4px));
-          padding: 16px 4px 24px;
+          padding: 16px 4px 16px;
         }
 
         @media screen and (max-width: 400px) {
           // width: min(460px, calc(33% - 4px));
-          padding: 8px 4px 12px;
+          padding: 12px 4px 12px;
         }
 
         &:focus {

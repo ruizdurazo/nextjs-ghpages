@@ -2,12 +2,13 @@
 
 .courses {
   overflow: hidden;
-  padding: 80px 0;
+  // padding: 80px 0;
+  padding: 64px 0;
   background: $background--red;
 
-  @media screen and (max-width: 1024px) {
-    padding: 64px 0;
-  }
+  // @media screen and (max-width: 1024px) {
+  //   padding: 64px 0;
+  // }
 
   @media screen and (max-width: 767px) {
     padding: 48px 0;
@@ -72,20 +73,22 @@
 
       & .pdf-card__main {
         display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        margin: 0 0 24px;
+        // flex-direction: row;
+        // align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
+        margin: 0 0 24px;
 
         @media screen and (max-width: 1024px) {
           width: auto;
         }
 
-        @media screen and (max-width: 480px) {
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-        }
+        // @media screen and (max-width: 480px) {
+        // flex-direction: column;
+        // align-items: center;
+        // width: 100%;
+        // }
 
         & .pdf-card__image {
           width: 84px;
@@ -107,7 +110,8 @@
           font-size: 28px;
           line-height: 28px;
           font-weight: 700;
-          margin-bottom: 8px;
+          // margin-bottom: 8px;
+          margin: 8px 0;
           letter-spacing: -0.01em;
         }
 
