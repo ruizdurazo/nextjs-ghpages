@@ -78,7 +78,7 @@ interface Translation {
     // PDF card
     pdf: {
       title: string
-      description: string
+      // description: string
       button: string
       file: string
     }
