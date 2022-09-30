@@ -362,8 +362,8 @@ const texts = {
         title: 'Current Schedule',
         // description: 'including class descriptions and other details.',
         button: 'Download PDF',
-        file: 'nextjs-ghpages/2022-20-Schedule-BailaRico.pdf', // PDF file
-        // file: '2022-01-Schedule-BailaRico.pdf', // PDF file
+        file: 'nextjs-ghpages/2022-10-Schedule-BailaRico.pdf', // PDF file
+        // file: '2022-10-Schedule-BailaRico.pdf', // PDF file
       },
       // Registration
       registration: {
